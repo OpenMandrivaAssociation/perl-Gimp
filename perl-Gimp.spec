@@ -10,7 +10,6 @@ Group:		Development/GNOME and GTK+
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%module-%{version}%pre.tar.bz2
 Patch0:		Gimp-2.0pre1-fix-build.patch
 URL:		http://search.cpan.org/~sjburges/Gimp/Gimp.pm
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk+2-devel perl-devel libgimp-devel > 2.0
 BuildRequires:	perl-Gtk2 perl-PDL perl-Parse-RecDescent perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
