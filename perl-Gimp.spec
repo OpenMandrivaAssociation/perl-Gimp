@@ -4,7 +4,7 @@ Summary:	Perl module enabling to write plugins for the Gimp2
 Name:		perl-%module
 Epoch:		1
 Version:	2.2
-Release:	%mkrel 0.%pre.3
+Release:	%mkrel 0.%pre.4
 License:	GPL or Artistic
 Group:		Development/GNOME and GTK+
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%module-%{version}%pre.tar.bz2
