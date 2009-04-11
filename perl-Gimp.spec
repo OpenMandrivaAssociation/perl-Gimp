@@ -9,6 +9,7 @@ License:	GPL or Artistic
 Group:		Development/GNOME and GTK+
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%module-%{version}%pre.tar.bz2
 Patch0:		Gimp-2.0pre1-fix-build.patch
+Patch1:		Gimp-2.2-fix-str-fmt.patch
 URL:		http://search.cpan.org/~sjburges/Gimp/Gimp.pm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk+2-devel perl-devel libgimp-devel > 2.0
@@ -29,10 +30,11 @@ This module provides perl access to the Gimp2 libraries.
 %prep
 %setup -q -n gimp-perl
 %patch0 -p0
+%patch1 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="$RPM_OPT_FLAGS"
+%make OPTIMIZE="%{optflags}"
 
 %check
 %make test
