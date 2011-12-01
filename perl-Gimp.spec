@@ -40,20 +40,20 @@ This module provides perl access to the Gimp2 libraries.
 %make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{_libdir}/gimp/2.0/plug-ins/
 make DESTDIR=%buildroot pure_vendor_install
-install -m 755 examples/* $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/
-perl -pi -e "s^/opt/bin/perl^%_bindir/perl^" $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/*
+install -m 755 examples/* %{buildroot}%{_libdir}/gimp/2.0/plug-ins/
+perl -pi -e "s^/opt/bin/perl^%_bindir/perl^" %{buildroot}%{_libdir}/gimp/2.0/plug-ins/*
 
 # fix conflict with gimp-1:
-rm -f $RPM_BUILD_ROOT%_mandir/man1/embedxpm.*
-rm -f $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/redeye
-rm -f $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/README
-rm -f $RPM_BUILD_ROOT%{_libdir}/gimp/2.0/plug-ins/examples.TODO
+rm -f %{buildroot}%_mandir/man1/embedxpm.*
+rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/redeye
+rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/README
+rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/examples.TODO
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
