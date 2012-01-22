@@ -12,7 +12,7 @@ Patch0:		Gimp-2.0pre1-fix-build.patch
 Patch1:		Gimp-2.2-fix-str-fmt.patch
 URL:		http://search.cpan.org/~sjburges/Gimp/Gimp.pm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	gtk+2-devel perl-devel libgimp-devel > 2.0
+BuildRequires:	gtk+2-devel perl-devel gimp-devel > 2.0
 BuildRequires:	perl-Gtk2 perl-PDL perl-Parse-RecDescent perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
 BuildRequires:  glitz-devel
