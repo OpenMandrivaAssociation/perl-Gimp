@@ -16,7 +16,6 @@ BuildRequires:	perl-Gtk2 perl-PDL perl-Parse-RecDescent perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
 BuildRequires:  pkgconfig(glitz)
 Requires:	perl-PDL
-Requires:	gtk+2 libgtk+2, perl-Glib >= 1.021
 %rename		gimp-perl
 
 # Don't use automatic requires for perl-PDL (#22095):
