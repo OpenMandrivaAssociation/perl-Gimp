@@ -5,7 +5,7 @@ Name:		perl-%{module}
 Epoch:		1
 Version:	2.2
 Release:	0.%{pre}.11
-License:	GPL or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%{module}-%{version}%{pre}.tar.bz2
 Patch0:		Gimp-2.0pre1-fix-build.patch
