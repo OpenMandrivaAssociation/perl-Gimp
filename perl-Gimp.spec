@@ -49,7 +49,7 @@ rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/README
 rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/examples.TODO
 
 %files
-%doc AUTHORS COPYING* examples/examples.TODO examples/README
+%doc AUTHORS examples/examples.TODO examples/README
 %{_bindir}/*
 %{_mandir}/*/*
 %{_libdir}/gimp/2.0/plug-ins/*
