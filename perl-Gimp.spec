@@ -31,7 +31,7 @@ This module provides perl access to the Gimp2 libraries.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="%{optflags}"
+%make
 
 %check
 %make test
@@ -43,7 +43,7 @@ install -m 755 examples/* %{buildroot}%{_libdir}/gimp/2.0/plug-ins/
 perl -pi -e "s^/opt/bin/perl^%{_bindir}/perl^" %{buildroot}%{_libdir}/gimp/2.0/plug-ins/*
 
 # fix conflict with gimp-1:
-rm -f %{buildroot}%_mandir/man1/embedxpm.*
+rm -f %{buildroot}%{_mandir}/man1/embedxpm.*
 rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/redeye
 rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/README
 rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/examples.TODO
