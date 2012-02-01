@@ -11,10 +11,10 @@ Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%{module}-%{versio
 Patch0:		Gimp-2.0pre1-fix-build.patch
 Patch1:		Gimp-2.2-fix-str-fmt.patch
 URL:		http://search.cpan.org/~sjburges/Gimp/Gimp.pm
-BuildRequires:	gtk+2-devel perl-devel gimp-devel > 2.0
+BuildRequires:	pkgconfig(gtk+-2.0) perl-devel pkgconfig(gimp-2.0)
 BuildRequires:	perl-Gtk2 perl-PDL perl-Parse-RecDescent perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
-BuildRequires:  glitz-devel
+BuildRequires:  pkgconfig(glitz)
 Requires:	perl-PDL
 Requires:	gtk+2 libgtk+2, perl-Glib >= 1.021
 %rename		gimp-perl
@@ -52,7 +52,7 @@ rm -f %{buildroot}%{_libdir}/gimp/2.0/plug-ins/examples.TODO
 %files
 %doc AUTHORS COPYING* examples/examples.TODO examples/README
 %{_bindir}/*
-%{_mandir} /*/*
+%{_mandir}/*/*
 %{_libdir}/gimp/2.0/plug-ins/*
 %{_prefix}/lib/perl5/*
 #%{perl_vendorlib}/%{module}
