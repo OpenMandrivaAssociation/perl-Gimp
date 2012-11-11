@@ -1,0 +1,20 @@
+--- Gimp/Lib.xs.str	2009-04-11 10:24:22.000000000 +0200
++++ Gimp/Lib.xs	2009-04-11 10:24:52.000000000 +0200
+@@ -679,7 +679,7 @@
+    r = unbless (sv, type, croak_str);
+ 
+    if (croak_str [0])
+-      croak (croak_str);
++      croak ("%s",croak_str);
+    
+    return r;
+ }
+@@ -1558,7 +1558,7 @@
+                     
+ 		
+                     if (croak_str[0])
+-                      croak (croak_str);
++                      croak ("%s",croak_str);
+                   }
+                 else
+                   croak (__("gimp procedure '%s' not found"), proc_name);

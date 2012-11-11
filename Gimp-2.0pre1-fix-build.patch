@@ -1,0 +1,11 @@
+--- ./Makefile.PL.tv	2004-03-26 09:15:50.388740831 +0100
++++ ./Makefile.PL	2004-03-26 09:15:57.592801215 +0100
+@@ -209,7 +209,7 @@
+ 	\$(PERL) -MExtUtils::Install -e 'uninstall(\$\$ARGV[0],1,0)' ".$self->catfile('$(PERL_ARCHLIB)','auto','$(FULLEXT)','.packlist')."
+ 
+ force_uninstall_from_sitedirs ::
+-	\$(PERL) -MExtUtils::Install -e 'uninstall(\$\$ARGV[0],1,0)' ".$self->catfile('$(SITEARCHEXP)','auto','$(FULLEXT)','.packlist')."
++	\$(PERL) -MExtUtils::Install -e 'uninstall(\$\$ARGV[0],1,0)' ".$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist')."
+ 
+ # generate tags file
+ tags: .
