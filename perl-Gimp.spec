@@ -1,5 +1,5 @@
-%define	module	Gimp
-%define	pre	pre1
+%define module Gimp
+%define pre pre1
 
 # Don't use automatic requires for perl-PDL (#22095):
 %if %{_use_internal_dependency_generator}
@@ -12,7 +12,7 @@ Summary:	Perl module enabling to write plugins for the Gimp2
 Name:		perl-%{module}
 Epoch:		1
 Version:	2.2
-Release:	0.%{pre}.12
+Release:	0.%{pre}.13
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%{module}-%{version}%{pre}.tar.bz2
@@ -28,7 +28,7 @@ BuildRequires:	perl-PDL
 BuildRequires:	perl-Parse-RecDescent
 BuildRequires:	perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
-BuildRequires:  pkgconfig(glitz)
+BuildRequires:	pkgconfig(glitz)
 Requires:	perl-PDL
 %rename		gimp-perl
 
