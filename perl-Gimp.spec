@@ -20,17 +20,19 @@ Source0:	http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%{module}-%{versio
 Patch0:		Gimp-2.0pre1-fix-build.patch
 Patch1:		Gimp-2.2-fix-str-fmt.patch
 Patch2:		gimp-perl-headers.patch
+Patch3:		Gimp-2.2-fix-includes.patch
+Patch4:		Gimp-2.2-fix-gtk.patch
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	perl-devel
+BuildRequires:	pkgconfig(gimp-2.0)
 BuildRequires:	perl-Gtk2
 BuildRequires:	perl-PDL
 BuildRequires:	perl-Parse-RecDescent
 BuildRequires:	perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
-BuildRequires:	pkgconfig(gimp-2.0)
 BuildRequires:	pkgconfig(glitz)
-BuildRequires:	pkgconfig(gtk+-2.0)
 Requires:	perl-PDL
-%rename		gimp-perl
+%rename	gimp-perl
 
 %description
 This module provides perl access to the Gimp2 libraries.
@@ -40,8 +42,11 @@ This module provides perl access to the Gimp2 libraries.
 %patch0 -p0
 %patch1 -p0
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
+export CFLAGS="%{optflags} -I/usr/include/gtk-2.0"
 %__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
