@@ -1,0 +1,30 @@
+--- UI/Makefile.PL~	2004-03-29 00:42:56.000000000 +0800
++++ UI/Makefile.PL	2013-01-23 21:35:54.083211318 +0800
+@@ -7,7 +7,7 @@
+ 
+ sub MY::const_config {
+    my $self = shift;
+-   $self->{LDDLFLAGS}="$GIMP_LIBS $LDFLAGS $LIBS $self->{LDDLFLAGS}";
++   $self->{LDDLFLAGS}="$LDFLAGS $LIBS $self->{LDDLFLAGS}";
+    package MY;
+    $self->SUPER::const_config(@_);
+ }
+--- Gimp/Makefile.PL.link	2000-07-20 22:44:16.000000000 +0800
++++ Gimp/Makefile.PL	2013-01-23 21:51:04.817013771 +0800
+@@ -4,7 +4,7 @@
+ 
+ sub MY::const_config {
+    my $self = shift;
+-   $self->{LDDLFLAGS}="$GIMP_LIBS_NOUI $self->{LDDLFLAGS} $LDFLAGS $LIBS $INTLLIBS";
++   $self->{LDDLFLAGS}="$self->{LDDLFLAGS} $LDFLAGS";
+    package MY;
+    $self->SUPER::const_config(@_);
+ }
+@@ -34,6 +34,7 @@
+     'NAME'	=> 'Gimp::Lib',
+     'VERSION_FROM' => '../Gimp.pm',
+     'INC'	=> "$INC1 $GIMP_INC_NOUI $CPPFLAGS $pdl_inc $CFLAGS",
++    'LIBS' => "$LIBS $GIMP_LIBS_NOUI $INTLLIBS",
+     'DEFINE'	=> "$DEFINE1 $DEFS",
+     'macro'	=> { libdir => $libdir, exec_prefix => $exec_prefix, prefix => $prefix },
+     'TYPEMAPS'	=> ["$topdir/typemap",@pdl_typemaps],
