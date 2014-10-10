@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Release:    4
 Epoch:      1
 
 Summary:    Perl module enabling to write plugins for the Gimp2
