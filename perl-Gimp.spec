@@ -15,7 +15,7 @@ Group:      Development/GNOME and GTK+
 Source0:    http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/%upstream_name-%{upstream_version}.tar.gz
 Patch1:     Gimp-2.2-fix-str-fmt.patch
 Patch2:     Gimp-2.2-linkage.patch
-Url:        http://search.cpan.org/~sjburges/Gimp/Gimp.pm
+Url:        https://search.cpan.org/~sjburges/Gimp/Gimp.pm
 
 BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: perl-devel
