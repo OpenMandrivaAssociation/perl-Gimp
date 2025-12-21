@@ -17,6 +17,7 @@ Patch1:     Gimp-2.2-fix-str-fmt.patch
 Patch2:     Gimp-2.2-linkage.patch
 Url:        https://search.cpan.org/~sjburges/Gimp/Gimp.pm
 
+BuildRequires:	make
 BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: perl-devel
 BuildRequires: pkgconfig(gimp-2.0)
