@@ -1,18 +1,16 @@
 %define	upstream_name	 Gimp
-%define upstream_version 2.38
-
 %define __noautoreq 'perl\\(PDL(.*)\\)'
 
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    2.38
+Release:    2
 Epoch:      1
 
 Summary:    Perl module enabling to write plugins for the Gimp2
 
 License:    GPL or Artistic
 Group:      Development/GNOME and GTK+
-Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETJ/Gimp-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETJ/Gimp-%{version}.tar.gz
 Patch1:     Gimp-2.2-fix-str-fmt.patch
 Patch2:     Gimp-2.2-linkage.patch
 Url:        https://gitlab.gnome.org/GNOME/gimp-perl
@@ -34,7 +32,7 @@ Requires:      perl-PDL
 This module provides perl access to the Gimp2 libraries.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch1 -p0
 %patch2 -p0
 
